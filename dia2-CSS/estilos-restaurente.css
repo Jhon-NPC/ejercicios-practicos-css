@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+hr{
+    display: none;
+}
+body{
+    background-color: darkkhaki;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contenedor{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 30px;
+}
+h1{
+    text-align: center;
+    color: darkslategrey;
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+h2{
+    color: darkcyan;
+    margin: 5px 0;
+}
+ul li, ol li{
+    padding: 5px 20px;
+    color: darkslategrey;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+th{
+    background-color: springgreen;
+}
+a{
+    display: inline-block;
+    padding: 10px;
+    background-color: tomato;
+    border-radius: 10px;
+    text-decoration: none;
+    color: midnightblue;
+}

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1a1a1a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1{
+    color: #8A0303;
+    text-align: center;
+    font-size: 48px;
+}
+h2{
+    color: #226802;
+    text-align: center;
+}
+h3{
+    color: #af0d1a;
+}
+p{
+    color: #02979c;
+}
+a{
+    text-decoration: none;
+    color: #ac730b;
+}
+.personaje{
+    color: #c04c4c;
+    font-size: 18px;
+}
+.frase{
+    font-weight: 600;
+}
+p a{
+    color: #25ac20;
+    font-weight: 600;
+}
