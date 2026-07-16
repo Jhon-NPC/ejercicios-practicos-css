@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3d405b;
+    align-items: center;
+    padding: 10px;
+}
+header h1{
+    color: yellowgreen;
+}
+header p{
+    color: #83c5be;
+}
+header nav{
+    display: flex;
+    gap: 5px;
+}
+header nav a{
+    color: #f4f1de;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #ad289b;
+}
+header nav a:hover{
+    background-color: violet;
+}
+h2{
+    color: rgb(20, 18, 18);
+}
+main{
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #e07a5f;
+}
+.contenedor-principal{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+#catalogo-productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#catalogo-productos h2{
+    width: 100%;
+}
+#catalogo-productos article{
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #788bff;
+}
+#contactanos form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#contactanos form input, #contactanos form textarea{
+    padding: 5px;
+    background-color: blanchedalmond;
+}
+#contactanos form button{
+    width: 100px;
+    padding: 5px;
+}
+aside{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 15px 25px;
+    background-color: #f6bd60;
+    flex-shrink: 0;
+}
+aside a{
+    text-decoration: none;
+    color: #0360ad;
+    font-size: 17px;
+}
+footer{
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    background-color: #ad6c03;
+}
+footer nav{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+footer nav a{
+    font-size: 18px;
+    color: rgb(241, 199, 199);
+}
+@media (max-width:1024px){
+    main{
+        max-width: 100%;
+        padding: 20px;
+    }
+    #catalogo-productos article{
+        min-width: 45%;
+        background-color: #785bff;
+    }
+}
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    main{
+        flex-direction: column;
+    }
+    aside{
+        width: 100%;
+    }
+    #catalogo-productos article{
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px){
+    header nav{
+        flex-direction: column;
+    }
+    header h1{
+        font-size: 22px;
+    }
+    footer{
+        padding: 8px;
+    }
+}
