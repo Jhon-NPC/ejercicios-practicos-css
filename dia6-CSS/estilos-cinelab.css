@@ -14,11 +14,16 @@ body{
 header{
     grid-area: header;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
+    padding: 15px 15px;
     color: beige;
     background-color: #004086;
+}
+header nav{
+    display: flex;
+    gap: 15px;
 }
 header nav a{
     color: antiquewhite;
@@ -52,16 +57,16 @@ section{
     grid-area: peliculas;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 #seleccion-peliculas .article-peliculas{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10px;
+    gap: 20px;
 }
 #seleccion-peliculas .article-peliculas article{
     text-align: justify;
-    padding: 15px 10px 15px 10px;
+    padding: 15px 10px;
     border-radius: 15px;
     background-color: #ffa983;
     border-left: 4px solid #ffcc2e;
@@ -103,16 +108,16 @@ section{
 }
 #comprar-entrada .contenedor-form{
     border: 2px solid #124e5e;
-    padding: 10px 15px;
+    padding: 15px 25px;
     background-color: #deed9f;
 }
 #comprar-entrada .contenedor-form form{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
 }
-#comprar-entrada .contenedor-form form input, #comprar-entrada .contenedor-form form select{
-    padding: 3px;
+#comprar-entrada .contenedor-form form input, #comprar-entrada .contenedor-form form select, #comprar-entrada .contenedor-form form textarea{
+    padding: 8px;
 }
 #comprar-entrada .contenedor-form form button{
     padding: 10px;
@@ -138,7 +143,7 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 aside a{
     color: cadetblue;
@@ -160,4 +165,122 @@ footer a{
 }
 hr{
     display: none;
+}
+
+/*Codigo CSS para realizar efectos, transiciones y animaciones */
+header nav a{
+    transition: all 0.3s ease;
+}
+header nav a:hover{
+    transform: translateY(-3px);
+    background-color: darkorange;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+#seleccion-peliculas .article-peliculas article{
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+}
+#seleccion-peliculas .article-peliculas article:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    border-left: 6px solid #c38d1f;
+}
+#categoria-premio table tbody tr{
+    transition: all 0.3s ease-out;
+}
+#categoria-premio table tbody tr:nth-child(odd){
+    background-color: skyblue;
+}
+#categoria-premio table tbody tr:hover{
+    background-color: palegreen;
+    cursor: pointer;
+}
+#comprar-entrada .contenedor-form form input, #comprar-entrada .contenedor-form form select, #comprar-entrada .contenedor-form form textarea{
+    transition: all 0.3s ease;
+}
+#comprar-entrada .contenedor-form form input:focus, #comprar-entrada .contenedor-form form select:focus, #comprar-entrada .contenedor-form form textarea:focus{
+    box-shadow: 0 0 5px 5px rgba(19, 219, 79, 0.5);
+    outline: none;
+    border: 1px solid white;
+}
+#comprar-entrada .contenedor-form form .contenedor-radio input:focus{
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+#comprar-entrada .contenedor-form form button {
+    transition: all 0.3s ease;
+}
+#comprar-entrada .contenedor-form form .contenedor-button .confirmar:hover{
+    transform: scale(1.02);
+    background-color: yellowgreen;
+    border: 1px solid limegreen;
+        cursor: pointer;
+}
+#comprar-entrada .contenedor-form form .contenedor-button .reiniciar:hover{
+    background-color: salmon;
+    border: 1px solid coral;
+    cursor: pointer;
+}
+aside a{
+    position: relative;
+}
+aside a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: peru;
+    transition: width 0.3s ease;
+}
+aside a:hover::after{
+    width: 100%;
+}
+@keyframes aparecerEntrada{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+header h1{
+    animation: aparecerEntrada 1s ease-in;
+}
+@keyframes fraseCreciendo{
+    from{
+        transform: scale(0.9);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+header p .resaltar-parte-eslogan{
+    display: inline-block;
+    animation: fraseCreciendo 2s ease-out infinite alternate-reverse;
+}
+@keyframes pulsacionSuave {
+    0%{
+        box-shadow: 0 0 0 0 rgba(12, 204, 124, 0.5);
+    }
+    60%{
+        box-shadow: 0 0 0 12px rgba(12, 204, 124, 0.0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(12, 204, 124, 0);;
+    }
+}
+header nav a:nth-child(3){
+    animation: pulsacionSuave 1s ease-out infinite;
+}
+aside, footer{
+    box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+section h2::before{
+    content: '▶';
+    color: maroon;
+    margin-right: 5px;
 }
