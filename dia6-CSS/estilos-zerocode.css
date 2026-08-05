@@ -103,6 +103,7 @@ main{
 #planes-precios table{
     border-collapse: collapse;
     grid-column: span 5;
+    background: rgb(236, 209, 157);
 }
 #planes-precios table th, #planes-precios table td{
     padding: 5px;
@@ -112,6 +113,7 @@ aside{
     grid-area: aside;
     padding: 20px 10px;
     padding-left: 25px;
+    border-radius: 5px;
     background-color: #96A78D;
 }
 aside a{
@@ -143,12 +145,12 @@ header nav a:hover{
     cursor: pointer;
 }
 #catalogo-cursos .cursos-articles article{
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s linear;
+    box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease-out;
 }
 #catalogo-cursos .cursos-articles article:hover{
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 25px 3px rgba(0, 0, 0, 0.25);
 }
 #iniciar-inscripcion form button{
     transition: all 0.1s linear;
@@ -157,4 +159,49 @@ header nav a:hover{
     background-color: yellowgreen;
     transform: scale(1.03);
     cursor: pointer;
+}
+aside{
+    transition: all 0.5s ease-out;
+}
+aside:hover{
+    background-color: rgb(74, 110, 110);
+}
+@keyframes aparecerConZoom {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+header h1{
+    animation: aparecerConZoom 1s ease;
+}
+@keyframes pulsoSuave{
+    0%{
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(3, 231, 163, 0.4);
+    }
+    70%{
+        transform: scale(1.03);
+        box-shadow: 0 0 0 10px rgba(3, 231, 163, 0);
+    }
+    100%{
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(3, 231, 163, 0);
+    }
+}
+header nav a:last-child{
+    animation: pulsoSuave 2s ease-in infinite;
+}
+#iniciar-inscripcion form input:focus{
+    box-shadow: 0 0 10px 2px rgba(38, 216, 2, 0.6);
+}
+#planes-precios table tbody tr:nth-child(odd){
+    background-color: tan;
+}
+#planes-precios table tbody td:nth-child(2){
+    background-color: tan;
 }
