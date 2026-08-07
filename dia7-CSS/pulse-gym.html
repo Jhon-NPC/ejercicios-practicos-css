@@ -23,7 +23,7 @@
             <section id="inicio">
                 <h1 class="nombre-gimnasio-principal">Pulse Gym</h1>
                 <p class="titulo-principal">Tu cambio físico y mental empieza hoy</p>
-                <p class="descripcion-parrafo-principal">En PulseGym combinamos tecnología de vanguardia, entrenadores certificados y la mejor energía para ayudarte a alcanzar tus metas. <span>Sin excusas, a tu propio ritmo.</span></p>
+                <p class="descripcion-parrafo-principal">En Pulse Gym combinamos tecnología de vanguardia, entrenadores certificados y la mejor energía para ayudarte a alcanzar tus metas. <span>Sin excusas, a tu propio ritmo.</span></p>
                 <a href="#contacto" class="boton-bienvenida1">Empieza tu prueba gratis</a>
                 <a href="#planes" class="boton-bienvenida2">Ver planes</a>
             </section>
@@ -37,7 +37,7 @@
                 </article>
                 <article>
                     <h3>Clases grupales</h3>
-                    <p>Mantén la motivación en nuestras sesiones dirigidas de Spin, Yoga, HIIT y Zumba, adaptadas a todos los niveles de condición física.</p>
+                    <p>Mantén la motivación en nuestras sesiones dirigidas de Spin, Yoga, <abbr title="Entrenamiento Intervalado de Alta Intensidad">HIIT</abbr> y Zumba, adaptadas a todos los niveles de condición física.</p>
                 </article>
                 <article>
                     <h3>Entrenamiento personalizado</h3>
@@ -62,27 +62,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Lunes a Viernes</td>
+                            <td rowspan="3">Lunes a Viernes</td>
                             <td>08:00 - 10:00</td>
                             <td>Spin y Cardio</td>
                         </tr>
                         <tr>
-                            <td>Lunes a Viernes</td>
                             <td>11:00 - 13:00</td>
                             <td>Yoga y Estiramiento</td>
                         </tr>
                         <tr>
-                            <td>Lunes a Viernes</td>
                             <td>16:00 - 18:00</td>
                             <td>Entrenamiento funcional / HIIT</td>
                         </tr>
                         <tr>
-                            <td>Sábados</td>
+                            <td rowspan="2">Sábados</td>
                             <td>08:00 - 10:00</td>
                             <td>Zumba y Baile</td>
                         </tr>
                         <tr>
-                            <td>Sábados</td>
                             <td>10:00 - 12:00</td>
                             <td>Calistenia</td>
                         </tr>
@@ -115,7 +112,7 @@
                     <p>Precio: $49 por mes</p>
                     <p>Beneficios:</p>
                     <ul>
-                        <li>Acceso ilimitado 24/7 a todas las instalaciones</li>
+                        <li>Acceso ilimitado <abbr title="24 horas al día, 7 días a la semana">24/7</abbr> a todas las instalaciones</li>
                         <li>Clases grupales ilimitadas</li>
                         <li>1 sesión al mes con entrenador personal</li>
                         <li>Acceso a área VIP y sauna</li>
@@ -146,9 +143,9 @@
                     <label for="correo-form">Ingrese su dirección email: </label>
                     <input id="correo-form" name="correo-form" type="email" placeholder="Correo elctrónico..." required>
                     <label for="telefono-form">Ingrese su número telefónico</label>
-                    <input id="telefono-form" name="telefono-form" type="tel" pattern="[0-9]{9}" placeholder="Número celular...">
+                    <input id="telefono-form" name="telefono-form" type="tel" pattern="[0-9]{9}" placeholder="Número celular..." required>
                     <label for="tipo-consulta-form">Asunto de la consulta: </label>
-                    <select id="tipo-consulta-form" name="tipo-consulta-form">
+                    <select id="tipo-consulta-form" name="tipo-consulta-form" required>
                         <option value="" selected disabled>-- Seleccione su tipo de consulta --</option>
                         <option value="servicios">Servicios</option>
                         <option value="planes">Plan membresía</option>
@@ -156,6 +153,8 @@
                     </select>
                     <label for="mensaje-form">Dejenos un mensaje: </label>
                     <textarea id="mensaje-form" name="mensaje-form" cols="60" rows="6" placeholder="Escribanos..." required></textarea>
+                    <input id="check-form" name="check-form" value="confirmacion" type="checkbox" required>
+                    <label for="check-form">Declaró que los datos ingresados son correctos y acepto las políticas de reserva de Pulse Gym</label>
                     <button type="submit">Enviar mensaje</button>
                     <button type="reset">Limpiar datos</button>
                 </form>
@@ -165,10 +164,10 @@
             <aside id="contenido-lateral">
                 <h3>Información adicional</h3>
                 <ul>
-                    <li><span class="resaltar-span">Ubicación:</span> Av. Principal #456, Centro Deportivo</li>
-                    <li><span class="resaltar-span">Horario de atención:</span> Lunes a Viernes de 06:00 a 23:00 / Sábados y Domingos de 08:00 a 18:00</li>
-                    <li><span class="resaltar-span">Contacto rápido:</span> +51 999999999 / contacto@pulsegym.com</li>
-                    <li><span class="resaltar-span">Aviso especial:</span> ¡Este mes 0% de costo en la inscripción del Plan Pro!</li>
+                    <li><strong>Ubicación:</strong> <abbr title="Avenida">Av.</abbr> Principal #456, Centro Deportivo</li>
+                    <li><strong>Horario de atención:</strong> Lunes a Viernes de 06:00 a 23:00 / Sábados y Domingos de 08:00 a 18:00</li>
+                    <li><strong>Contacto rápido:</strong> +51 999999999 / contacto@pulsegym.com</li>
+                    <li><strong>Aviso especial:</strong> ¡Este mes 0% de costo en la inscripción del Plan Pro!</li>
                 </ul>
             </aside>
         </main>
