@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #e0e0e0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header"
+                        "main" 
+                        "footer";
+}
+/* Estilos del header */
+header{
+    grid-area: header;
+}
+.contenido-header{
+    background-color: #1a1a2e;
+    padding: 5px 10px;
+    min-height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenido-header .nombre-gimnasio{
+    font-size: 1.7rem;
+    font-weight: bold;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.contenido-header .eslogan-gimnasio{
+    font-size: 1.04rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.contenido-header .nav-header{
+    display: flex;
+    flex: 1;
+    flex-basis: 15%;
+    justify-content: center;
+    gap: 8px;
+}
+.contenido-header .nav-header a{
+    font-size: 1.02rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: #EAB308;
+    border-radius: 8px;
+}
+.contenido-header .nav-header a:hover{
+    background-color: #E8B747;
+}
+.contenido-header .nav-header a:link, .boton-bienvenida1, .boton-bienvenida2{
+    color: #eeeeee;
+}
+.contenido-header .nav-header a:visited, .boton-bienvenida1, .boton-bienvenida2{
+    color: #1252ac;
+}
+
+/* Estilos del main */
+main{
+    display: grid;
+    grid-area: main;
+    grid-template-areas:"inicio inicio inicio"
+                        "servicios servicios aside"
+                        "horarios contacto aside"
+                        "planes planes aside";
+    grid-template-columns: repeat(2,1fr) 220px;
+    background-color: #121212;
+}
+
+/* Sección de bienvenida */
+#inicio{
+    grid-area: inicio;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.1) ), url("assets/gym2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 88vh;
+    position: relative;
+}
+#inicio::after{
+    content: "";
+    position: absolute;
+    width: 437px;
+    height: 376px;
+    background-image: url("assets/gym3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+.contenido-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 88vh;
+    gap: 15px;
+    padding: 0 30px;
+    text-align: left;
+}
+.contenido-inicio .nombre-principal{
+    font-size: 4.5rem;
+    width: 50vw;
+}
+.contenido-inicio .titulo-principal{
+    font-size: 2.3rem;
+    width: 50vw;
+    text-align: justify;
+    font-weight: 600;
+    color: #EAF2F8;
+}
+.contenido-inicio .descripcion-principal{
+    font-size: 1.4rem;
+    width: 60vw;
+    text-align: justify;
+    color: #CFF0EA;
+}
+.contenido-inicio .descripcion-principal span{
+    color: #af0c0c;
+    font-weight: bold;
+}
+.contenido-inicio .nav-main-inicio{
+    font-size: 1.1rem;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+.contenido-inicio .nav-main-inicio a{
+    padding: 10px 20px;
+    background-color: #3eadb9;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.contenido-inicio .nav-main-inicio a:hover{
+    background-color: #88C9C4;
+}
+
+/* Sección de tarjetas de servicios */
+#servicios{
+    grid-area: servicios;
+}
+
+/* Sección de tabla de horarios semanales */
+#horarios{
+    grid-area: horarios;
+}
+
+/* Sección de planes de membresía */
+#planes{
+    grid-area: planes;
+}
+
+/* Sección de formulario de contacto */
+#contacto{
+    grid-area: contacto;
+}
+
+/* Información rápida lateral */
+#contenido-lateral{
+    grid-area: aside;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+/* Estilos del footer */
+footer{
+    grid-area: footer;
+}
