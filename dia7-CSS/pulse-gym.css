@@ -55,10 +55,10 @@ header{
 .contenido-header .nav-header a:hover{
     background-color: #E8B747;
 }
-.contenido-header .nav-header a:link, .boton-bienvenida1, .boton-bienvenida2{
+.contenido-header .nav-header a:link, .boton-bienvenida{
     color: #eeeeee;
 }
-.contenido-header .nav-header a:visited, .boton-bienvenida1, .boton-bienvenida2{
+.contenido-header .nav-header a:visited, .boton-bienvenida{
     color: #1252ac;
 }
 
@@ -80,7 +80,7 @@ main{
 #servicios, #horarios, #planes{
     margin-left: 25px;
 }
-#contenido-lateral{
+#contenido-lateral, #planes{
     margin-right: 25px;
 }
 .subtitulo-principal{
@@ -189,6 +189,9 @@ main{
     font-size: 1.03rem;
     text-align: justify;
 }
+.estilo-lgparrafo{
+    font-size: 1.1rem;
+}
 
 /* Sección de tabla de horarios semanales */
 #horarios{
@@ -220,7 +223,85 @@ main{
 }
 
 /* Sección de planes de membresía */
-
+#planes{
+    grid-area: planes;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#planes .contenido-planes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+#planes .contenido-planes article{
+    background-color: #1F2937; 
+    border-radius: 10px;
+    padding: 25px 20px;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+#planes .contenido-planes article h3{
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+#planes .contenido-planes article ul{
+    list-style-type: circle;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#planes .contenido-planes article ul li{
+    font-size: 1.05rem;
+    text-align: left;
+    line-height: 1.5;
+}
+#planes .contenido-planes article a{
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: auto;
+    align-self: center;
+}
+#planes .contenido-planes .plan1{
+    border-top: 4px solid #CD7F32;
+}
+#planes .contenido-planes article .boton-plan1{
+    background: linear-gradient(135deg, #E5A96E 0%, #CD7F32 50%, #8C5A2B 100%);
+    color: #121212;
+}
+#planes .contenido-planes article .boton-plan1:hover{
+    background: #CD7F32;
+    color: #0F172A;
+}
+#planes .contenido-planes .plan2{
+    border-top: 4px solid #C0C0C0;
+}
+#planes .contenido-planes article .boton-plan2{
+    background: linear-gradient(135deg, #E5E4E2 0%, #C0C0C0 50%, #7D8B96 100%);
+    color: #121212;
+}
+#planes .contenido-planes article .boton-plan2:hover{
+    background: #C0C0C0;
+    color: #0F172A;
+}
+#planes .contenido-planes .plan3{
+    border-top: 4px solid #FFD700;
+}
+#planes .contenido-planes article .boton-plan3{
+    background: linear-gradient(135deg, #FFE57F 0%, #FFD700 50%, #B8860B 100%);
+    color: #121212;
+}
+#planes .contenido-planes article .boton-plan3:hover{
+    background: #FFD700;
+    color: #0F172A;
+}
 
 /* Sección de formulario de contacto */
 #contacto{
@@ -228,6 +309,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-width: 0;
 }
 #contacto form{
     background-color: #241F37;
@@ -253,6 +335,9 @@ main{
     grid-template-columns: repeat(3,1fr);
     gap: 12px;
 }
+#contacto form .contenedor-boton button{
+    border-radius: 5px;
+}
 #contacto form .contenedor-boton button:first-child{
     grid-column: span 2;
 }
@@ -270,7 +355,7 @@ main{
     justify-content: center;
     gap: 50px;
 }
-#contenido-lateral h3{
+#contenido-lateral h3, #planes .contenido-planes article h3{
     text-align: center;
 }
 #contenido-lateral ul{
