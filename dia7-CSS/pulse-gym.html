@@ -23,25 +23,26 @@
             </div>
         </header>
         <main>
-                            <!-- Sección de bienvenida -->
-                <section id="inicio">
-                    <div class="contenido-inicio">
-                        <h1 class="nombre-principal">Pulse Gym</h1>
-                        <p class="titulo-principal">Tu cambio físico y mental empieza hoy</p>
-                        <p class="descripcion-principal">En Pulse Gym combinamos tecnología de vanguardia, entrenadores certificados y la mejor energía para ayudarte a alcanzar tus metas. <span>Sin excusas, a tu propio ritmo.</span></p>
-                        <div class="nav-main-inicio">
-                            <a href="#contacto" class="boton-bienvenida1">Empieza tu prueba gratis</a>
-                            <a href="#planes" class="boton-bienvenida2">Ver planes</a>
-                        </div>
+            <!-- Sección de bienvenida -->
+            <section id="inicio">
+                <div class="contenido-inicio">
+                    <h1 class="nombre-principal">Pulse Gym</h1>
+                    <p class="titulo-principal">Tu cambio físico y mental empieza hoy</p>
+                    <p class="descripcion-principal">En Pulse Gym combinamos tecnología de vanguardia, entrenadores certificados y la mejor energía para ayudarte a alcanzar tus metas. <span>Sin excusas, a tu propio ritmo.</span></p>
+                    <div class="nav-main-inicio">
+                        <a href="#contacto" class="boton-bienvenida1">Empieza tu prueba gratis</a>
+                        <a href="#planes" class="boton-bienvenida2">Ver planes</a>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <!-- Sección de tarjetas de servicios -->
-                <section id="servicios">
-                    <h2 class="subtitulo-principal">Nuestros servicos</h2>
+            <!-- Sección de tarjetas de servicios -->
+            <section id="servicios">
+                <h2 class="subtitulo-principal">Nuestros servicios</h2>
+                <div class="contenido-servicios">
                     <article>
                         <h3>Zona de pesas y cardio</h3>
-                        <p>Equipamiento de última generación, áreas de peso libre y máquinas guiadas diseñadas para maximizar tu rendimiento de forma segura.</p>
+                        <p class="">Equipamiento de última generación, áreas de peso libre y máquinas guiadas diseñadas para maximizar tu rendimiento de forma segura.</p>
                     </article>
                     <article>
                         <h3>Clases grupales</h3>
@@ -55,11 +56,13 @@
                         <h3>Asesoría nutricional</h3>
                         <p>Complementa tu entrenamiento con planes de alimentación estructurados por profesionales para garantizar resultados sostenibles.</p>
                     </article>
-                </section>
+                </div>
+            </section>
 
-                <!-- Sección de tabla de horarios semanales -->
-                <section id="horarios">
-                    <h2 class="subtitulo-principal">Horario de clases grupales</h2>
+            <!-- Sección de tabla de horarios semanales -->
+            <section id="horarios">
+                <h2 class="subtitulo-principal">Horario de clases grupales</h2>
+                <div class="contenido-tabla">
                     <table>
                         <thead>
                             <tr>
@@ -70,7 +73,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="3">Lunes a Viernes</td>
+                                <td rowspan="3" class="celda-dia">Lunes a Viernes</td>
                                 <td>08:00 - 10:00</td>
                                 <td>Spin y Cardio</td>
                             </tr>
@@ -83,7 +86,7 @@
                                 <td>Entrenamiento funcional / HIIT</td>
                             </tr>
                             <tr>
-                                <td rowspan="2">Sábados</td>
+                                <td rowspan="2"class="celda-dia">Sábados</td>
                                 <td>08:00 - 10:00</td>
                                 <td>Zumba y Baile</td>
                             </tr>
@@ -92,17 +95,19 @@
                                 <td>Calistenia</td>
                             </tr>
                             <tr>
-                                <td>Domingos</td>
+                                <td class="celda-dia">Domingos</td>
                                 <td>08:00 - 14:00</td>
                                 <td>Salas abiertas para entrenamiento libre</td>
                             </tr>
                         </tbody>
                     </table>
-                </section>
+                </div>
+            </section>
 
-                <!-- Sección de planes de membresía -->
-                <section id="planes">
-                    <h2 class="subtitulo-principal">Planes de membresía</h2>
+            <!-- Sección de planes de membresía -->
+            <section id="planes">
+                <h2 class="subtitulo-principal">Planes de membresía</h2>
+                <div class="contenido-planes">
                     <article>
                         <h3>Plan 1: Básico</h3>
                         <p>Precio: $29 por mes</p>
@@ -139,45 +144,50 @@
                         </ul>
                         <a href="#" class="boton-plan">Elegir plan VIP</a>
                     </article>
-                </section>
+                </div>
+            </section>
                 
-                <!-- Sección de formulario de contacto-->
-                <section id="contacto">
-                    <h2 class="subtitulo-principal">Ponte en contacto</h2>
-                    <p>¿Tienes dudas o quieres agendar una visita guiada? Escríbenos y te responderemos a la brevedad.</p>
-                    <form action="" method="post">
-                        <label for="nombre-form">Ingrese sus nombres: </label>
-                        <input id="nombre-form" name="nombre-form" type="text" placeholder="Nombre completo..." required>
-                        <label for="correo-form">Ingrese su dirección email: </label>
-                        <input id="correo-form" name="correo-form" type="email" placeholder="Correo elctrónico..." required>
-                        <label for="telefono-form">Ingrese su número telefónico</label>
-                        <input id="telefono-form" name="telefono-form" type="tel" pattern="[0-9]{9}" placeholder="Número celular..." required>
-                        <label for="tipo-consulta-form">Asunto de la consulta: </label>
-                        <select id="tipo-consulta-form" name="tipo-consulta-form" required>
-                            <option value="" selected disabled>-- Seleccione su tipo de consulta --</option>
-                            <option value="servicios">Servicios</option>
-                            <option value="planes">Plan membresía</option>
-                            <option value="otros">Otros</option>
-                        </select>
-                        <label for="mensaje-form">Dejenos un mensaje: </label>
-                        <textarea id="mensaje-form" name="mensaje-form" cols="60" rows="6" placeholder="Escribanos..." required></textarea>
+            <!-- Sección de formulario de contacto-->
+            <section id="contacto">
+                <h2 class="subtitulo-principal">Ponte en contacto</h2>
+                <p class="estilo-parrafo">¿Tienes dudas o quieres agendar una visita guiada? Escríbenos y te responderemos a la brevedad.</p>
+                <form action="" method="post">
+                    <label for="nombre-form">Ingrese sus nombres: </label>
+                    <input id="nombre-form" name="nombre-form" type="text" placeholder="Nombre completo..." required>
+                    <label for="correo-form">Ingrese su dirección email: </label>
+                    <input id="correo-form" name="correo-form" type="email" placeholder="Correo elctrónico..." required>
+                    <label for="telefono-form">Ingrese su número telefónico</label>
+                    <input id="telefono-form" name="telefono-form" type="tel" pattern="[0-9]{9}" placeholder="Número celular..." required>
+                    <label for="tipo-consulta-form">Asunto de la consulta: </label>
+                    <select id="tipo-consulta-form" name="tipo-consulta-form" required>
+                        <option value="" selected disabled>-- Seleccione su tipo de consulta --</option>
+                        <option value="servicios">Servicios</option>
+                        <option value="planes">Plan membresía</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    <label for="mensaje-form">Dejenos un mensaje: </label>
+                    <textarea id="mensaje-form" name="mensaje-form" cols="60" rows="6" placeholder="Escribanos..." required></textarea>
+                    <div class="contenedor-checkbox">
                         <input id="check-form" name="check-form" value="confirmacion" type="checkbox" required>
                         <label for="check-form">Declaró que los datos ingresados son correctos y acepto las políticas de reserva de Pulse Gym</label>
+                    </div>
+                    <div class="contenedor-boton">
                         <button type="submit">Enviar mensaje</button>
                         <button type="reset">Limpiar datos</button>
-                    </form>
-                </section>
+                    </div>
+                </form>
+            </section>
 
-                <!-- Información rápida lateral -->
-                <aside id="contenido-lateral">
-                    <h3>Información adicional</h3>
-                    <ul>
-                        <li><strong>Ubicación:</strong> <abbr title="Avenida">Av.</abbr> Principal #456, Centro Deportivo</li>
-                        <li><strong>Horario de atención:</strong> Lunes a Viernes de 06:00 a 23:00 / Sábados y Domingos de 08:00 a 18:00</li>
-                        <li><strong>Contacto rápido:</strong> +51 999999999 / contacto@pulsegym.com</li>
-                        <li><strong>Aviso especial:</strong> ¡Este mes 0% de costo en la inscripción del Plan Pro!</li>
-                    </ul>
-                </aside>
+            <!-- Información rápida lateral -->
+            <aside id="contenido-lateral">
+                <h3 class="subtitulo-secundario">Información adicional</h3>
+                <ul>
+                    <li><strong>Ubicación:</strong> <br><abbr title="Avenida">Av.</abbr> Principal #456, Centro Deportivo</li>
+                    <li><strong>Horario de atención:</strong> <br>Lunes a Viernes de 06:00 a 23:00 / Sábados y Domingos de 08:00 a 18:00</li>
+                    <li><strong>Contacto rápido:</strong> <br>+51 999999999 / contacto@pulsegym.com</li>
+                    <li><strong>Aviso especial:</strong> <br>¡Este mes 0% de costo en la inscripción del Plan Pro!</li>
+                </ul>
+            </aside>
         </main>
         <footer>
             <!-- Contenido del pie de página -->
