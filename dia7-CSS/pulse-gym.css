@@ -168,14 +168,14 @@ main{
 }
 #servicios .contenido-servicios{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(min(240px,100%),1fr));
     gap: 10px;
-    height: 250px;
+    min-height: 250px;
 }
 #servicios .contenido-servicios article{
     background: #1F2937;
     border-radius: 10px;
-    padding: 0 20px;
+    padding: 25px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -231,7 +231,7 @@ main{
 }
 #planes .contenido-planes{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(min(275px,100%),1fr)); 
     gap: 15px;
 }
 #planes .contenido-planes article{
@@ -246,7 +246,6 @@ main{
 }
 #planes .contenido-planes article h3{
     margin-bottom: 10px;
-    margin-top: 0;
 }
 #planes .contenido-planes article ul{
     list-style-type: circle;
@@ -322,24 +321,57 @@ main{
 #contacto form label{
     font-size: 1.05rem;
 }
-#contacto form input, #contacto form select, #contacto form textarea, #contacto form button{
-    padding: 8px 6px;
+#contacto form input, #contacto form select, #contacto form textarea{
+    padding: 10px 6px;
+    background-color: #161224;
+    color: #F3F4F6;
+    border: 1px solid #3B3358;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease
+}
+#contacto form input:focus, #contacto form select:focus, #contacto form textarea:focus{
+    border-color: #EAB308;
+    box-shadow: 0 0 5px 5px rgba(234, 179, 8, 0.2);
 }
 #contacto form .contenedor-checkbox{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 15px;
 }
 #contacto form .contenedor-boton{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 12px;
+    margin-top: 5px;
 }
 #contacto form .contenedor-boton button{
     border-radius: 5px;
+    padding: 8px 6px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 #contacto form .contenedor-boton button:first-child{
     grid-column: span 2;
+    background-color: #EAB308;
+    color: #121212;
+}
+#contacto form .contenedor-boton button:first-child:hover{
+    background-color: #CA8A04;
+    transform: translateY(-1px);
+}
+#contacto form .contenedor-boton button:last-child{
+    background-color: #37314F;
+    color: #C4C0DC;
+    border: 1px solid #4D456E;
+}
+#contacto form .contenedor-boton button:last-child:hover{
+    background-color: #4D456E;
+    color: #FFFFFF;
 }
 
 /* Información rápida lateral */
