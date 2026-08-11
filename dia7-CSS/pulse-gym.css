@@ -51,9 +51,11 @@ header{
     padding: 8px 20px;
     background-color: #EAB308;
     border-radius: 8px;
+    transition: all 0.3s ease;
 }
 .contenido-header .nav-header a:hover{
     background-color: #E8B747;
+    transform: translateY(-2px);
 }
 .contenido-header .nav-header a:link, .boton-bienvenida{
     color: #eeeeee;
@@ -154,9 +156,24 @@ main{
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+@keyframes pulsoSuave {
+    0%, 100% {
+        box-shadow: 0 0 0px rgba(180, 208, 199, 0);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(180, 208, 199, 0.8);
+    }
+}
+.contenido-inicio .nav-main-inicio a:last-of-type{
+    animation: pulsoSuave 2s ease infinite;
 }
 .contenido-inicio .nav-main-inicio a:hover{
     background-color: #88C9C4;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(136, 201, 196, 1);
+    animation-play-state: paused;
 }
 
 /* Sección de tarjetas de servicios */
@@ -170,16 +187,19 @@ main{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(min(240px,100%),1fr));
     gap: 10px;
-    min-height: 250px;
 }
 #servicios .contenido-servicios article{
-    background: #1F2937;
+    background: rgba(255, 255, 255, 0.04);
     border-radius: 10px;
+    border: 3px solid transparent;
+    border-left: 3px solid #F97316;
     padding: 25px 20px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 15px;
+    transition: all 0.5s ease;
 }
 #servicios .contenido-servicios article h3{
     text-align: center;
@@ -191,6 +211,13 @@ main{
 }
 .estilo-lgparrafo{
     font-size: 1.1rem;
+}
+#servicios .contenido-servicios article:hover{
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.12);
+    border-left-color: #83c4af;
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.12);
 }
 
 /* Sección de tabla de horarios semanales */
@@ -208,7 +235,7 @@ main{
 }
 #horarios .contenido-tabla table{
     border-collapse: collapse;
-    background-color: #241F37;
+    background-color: #1F2937;
     width: 100%;
     height: 100%;
     table-layout: fixed;    /* Hace que las columnas tengan el mismo ancho*/
@@ -235,14 +262,16 @@ main{
     gap: 15px;
 }
 #planes .contenido-planes article{
-    background-color: #1F2937; 
+    background: rgba(255, 255, 255, 0.04);
     border-radius: 10px;
+    border: 3px solid transparent;
     padding: 25px 20px;
     min-height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    transition: all 0.5s ease;
 }
 #planes .contenido-planes article h3{
     margin-bottom: 10px;
@@ -271,6 +300,13 @@ main{
 #planes .contenido-planes .plan1{
     border-top: 4px solid #CD7F32;
 }
+#planes .contenido-planes .plan1:hover{
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.12);
+    border-top: 4px solid rgb(204, 105, 7, 1);
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.12);
+}
 #planes .contenido-planes article .boton-plan1{
     background: linear-gradient(135deg, #E5A96E 0%, #CD7F32 50%, #8C5A2B 100%);
     color: #121212;
@@ -282,6 +318,13 @@ main{
 #planes .contenido-planes .plan2{
     border-top: 4px solid #C0C0C0;
 }
+#planes .contenido-planes .plan2:hover{
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.12);
+    border-top: 4px solid rgba(230, 230, 230, 1);
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.12);
+}
 #planes .contenido-planes article .boton-plan2{
     background: linear-gradient(135deg, #E5E4E2 0%, #C0C0C0 50%, #7D8B96 100%);
     color: #121212;
@@ -292,6 +335,13 @@ main{
 }
 #planes .contenido-planes .plan3{
     border-top: 4px solid #FFD700;
+}
+#planes .contenido-planes .plan3:hover{
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.12);
+    border-top: 4px solid rgba(255, 228, 74, 1);
+    background-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.12);
 }
 #planes .contenido-planes article .boton-plan3{
     background: linear-gradient(135deg, #FFE57F 0%, #FFD700 50%, #B8860B 100%);
@@ -311,7 +361,7 @@ main{
     min-width: 0;
 }
 #contacto form{
-    background-color: #241F37;
+    background-color: #1F2937;
     padding: 22px 18px;
     border-radius: 8px;
     display: flex;
@@ -328,7 +378,7 @@ main{
     border: 1px solid #3B3358;
     border-radius: 6px;
     outline: none;
-    transition: all 0.3s ease
+    transition: all 0.5s ease
 }
 #contacto form input:focus, #contacto form select:focus, #contacto form textarea:focus{
     border-color: #EAB308;
@@ -339,6 +389,9 @@ main{
     flex-direction: row;
     align-items: center;
     gap: 15px;
+}
+#contacto form .contenedor-checkbox #check-form{
+    cursor: pointer;
 }
 #contacto form .contenedor-boton{
     display: grid;
@@ -357,11 +410,11 @@ main{
 }
 #contacto form .contenedor-boton button:first-child{
     grid-column: span 2;
-    background-color: #EAB308;
-    color: #121212;
+    background-color: #3b7ae0;
+    color: #FFFFFF;
 }
 #contacto form .contenedor-boton button:first-child:hover{
-    background-color: #CA8A04;
+    background-color: #1D4ED8;
     transform: translateY(-1px);
 }
 #contacto form .contenedor-boton button:last-child{
@@ -378,7 +431,7 @@ main{
 #contenido-lateral{
     background-color: #111827;
     border-radius: 10px;
-    border-left: 4px solid #1F2937;
+    border-left: 4px solid #034450;
     padding: 0px 15px;
     grid-area: aside;
     display: flex;
@@ -401,4 +454,47 @@ main{
 /* Estilos del footer */
 footer{
     grid-area: footer;
+    background-color: #1a1a2e;
+    padding: 35px 20px 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+footer h3{
+    color: #EAB308;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+footer h3:first-of-type{
+    margin-top: 0;
+}
+footer p{
+    color: #9CA3AF;
+    font-size: 1.09rem;
+}
+footer .nav-footer{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+footer .nav-footer a{
+    color: #EAF2F8;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 18px;
+    background-color: #161224; 
+    border: 1px solid #3B3358;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+footer .nav-footer a:hover {
+    background-color: #2A244D;        
+    color: #FFFFFF;                 
+    border-color: slateblue;
+    transform: translateY(-2px);
 }
