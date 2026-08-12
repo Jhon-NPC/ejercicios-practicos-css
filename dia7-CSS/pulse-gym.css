@@ -134,7 +134,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 88vh;
+    height: stretch;
     gap: 15px;
     padding: 0 30px;
     text-align: left;
@@ -610,8 +610,77 @@ footer .nav-footer a:hover {
     }
 }
 @media (max-width: 768px){
-    
+    main{
+        grid-template-areas:"inicio"
+                            "servicios"
+                            "horarios"
+                            "contacto"
+                            "planes"
+                            "aside";
+        grid-template-columns: 1fr
+    }
+    #horarios{
+        margin-right: 20px;
+    }
+    #contacto{
+        margin-left: 20px;
+    }
+}
+@media (max-width: 730px) {
+    #inicio::after{
+        width: 287px;
+        height: 226px;
+    }
+    .contenido-inicio .nombre-principal{
+        font-size: 3.0rem;
+    }
+    .contenido-inicio .titulo-principal{
+        font-size: 1.3rem;
+    }
+    .contenido-inicio .descripcion-principal{
+        font-size: 1em;
+    }
+    .contenido-inicio .nav-main-inicio a{
+        padding: 10px 5px;
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 630px) {
+    .contenido-header{
+        flex-direction: column;
+        gap: 5px;
+        padding: 15px 10px;
+    }
+    .contenido-header .nav-header{
+        margin-top: 5px;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    #inicio{
+        height: 85vh;
+    }
+    #inicio::after{
+        display: none;
+    }
+    .contenido-inicio .nombre-principal{
+    font-size: 3.5rem;
+    }
+    .contenido-inicio .titulo-principal{
+        font-size: 1.6rem;
+        width: fit-content;
+    }
+    .contenido-inicio .descripcion-principal{
+        font-size: 1.15rem;
+        width: fit-content;
+    }
+    .contenido-inicio .nav-main-inicio a{
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
 }
 @media (max-width: 480px){
-    
+    #servicios .contenido-servicios{
+        grid-template-columns: 1fr;
+    }
 }
