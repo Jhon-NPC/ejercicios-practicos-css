@@ -30,7 +30,6 @@ header{
     display: flex;
     flex: 1;
     justify-content: center;
-    text-align: center;
 }
 .contenido-header .eslogan-gimnasio{
     font-size: 1.04rem;
@@ -483,7 +482,7 @@ main{
 footer{
     grid-area: footer;
     background-color: #1a1a2e;
-    padding: 35px 20px 25px 20px;
+    padding: 20px 20px 25px 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -547,6 +546,45 @@ footer .nav-footer a:hover {
     .contenido-inicio .nav-main-inicio a{
         padding: 10px 15px;
         font-size: 1.05rem;
+    }
+    main{
+        grid-template-areas:"inicio inicio"
+                            "servicios servicios"
+                            "horarios contacto"
+                            "planes planes"
+                            "aside aside";
+        grid-template-columns: repeat(2,1fr);
+    }
+    #servicios .contenido-servicios{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #servicios .contenido-servicios article{
+        min-height: 220px;
+    }
+    #contacto{
+        margin-right: 20px;
+    }
+    #horarios{
+        margin-left: 20px;
+    }
+    #servicios, #planes, #contenido-lateral{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #contenido-lateral{
+        border-left: none;
+        border-top: 4px solid #034450;
+        padding: 25px 35px;
+        gap: 25px;
+    }
+}
+@media (max-width: 910px){
+    #planes .contenido-planes{
+        grid-template-columns: 1fr;
+    }
+    #planes .contenido-planes article{
+        height: 340px;
+        padding: 20px 25px;
     }
 }
 @media (max-width: 875px){
